@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    - uses: actions/checkout@v2
 
     - name: Set up Java version
       uses: actions/setup-java@v1
@@ -50,5 +49,4 @@ jobs:
       with:
         app-name: 'mytg123'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_2a1dde34b5734438b5969db821fe7d9d }}
-        package: '*.jar'
+        publish-profile: ${{ secrets.AzureAppService_P
